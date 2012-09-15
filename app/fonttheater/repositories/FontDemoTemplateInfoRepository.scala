@@ -1,0 +1,6 @@
+package fonttheater.repositories
+
+import fonttheater.models.FontDemoTemplateInfo
+
+
+trait FontDemoTemplateInfoRepository extends EntityRepository[FontDemoTemplateInfo]

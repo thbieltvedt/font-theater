@@ -1,0 +1,9 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /fontdemo/:fontDemoTemplate                 fonttheater.controllers.Application.fontDemo(fontDemoTemplate: String)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /public/*file               controllers.Assets.at(path="/public", file)

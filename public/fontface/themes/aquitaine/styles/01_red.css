@@ -1,0 +1,45 @@
+a, #menu-wrapper ul li a:hover {
+	color:#bb1010;	
+}
+.blog-misc a:hover {
+	color:#bb1010 !important;	
+}
+.blog-block h2 {
+	color:#bb1010;
+}
+.wp-pagenavi a:hover, .wp-pagenavi span.current {	
+	background:#bb1010;
+}
+.box ul li a:hover {
+	color:#bb1010;
+}
+.widget_tag_cloud a:hover {
+	background:#bb1010;
+}
+.box .loginwidget-list a {
+	color:#bb1010;	
+}
+.twitter-section-wrapper a:hover {
+	color:#bb1010;
+}
+.box #recentcomments li .url {
+	color:#bb1010;	
+}
+.tagdetail-wrapper a:hover {
+	color:#bb1010;
+}
+.related-posts li a:hover {
+	color:#bb1010;
+}
+.contact-submit:hover, .widget_search #searchsubmit:hover {
+	background:#bb1010;
+}
+.service-wrapper .showskin, .intservice-wrapper .showskin {
+	color:#bb1010;
+}
+.btn:hover, a.white-button:hover span {
+	color:#bb1010;
+}
+.box #twitter_update_list li span a {
+	color:#bb1010;	
+}

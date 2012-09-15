@@ -1,0 +1,13 @@
+@(model: models.FontTheatreModel)
+
+@fontCollection = @{model.fontNavigatorHeadingsText.fontCollection}
+@parameterNameFontFamily = @{models.FontTheatreModel.PARAMETER_NAME_FONT_HEADINGS_TEXT}
+@parameterNameFontCollection = @{models.FontTheatreModel.PARAMETER_NAME_FONT_COLLECTION_HEADINGS}
+
+<div>	
+	<p class="font-links" style="">
+		@for(font <- fontCollection.fonts) {
+			<a href="?@parameterNameFontFamily=@{font.name}:@{font.weight}&@parameterNameFontCollection=@fontCollection.id">@{font.displayName} @{if(font.weight != 400) font.weightName}</a>&nbsp;| 
+		}
+	</p>
+</div>
