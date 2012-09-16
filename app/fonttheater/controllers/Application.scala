@@ -8,9 +8,14 @@ import play.api.mvc._
 import play.api.templates.Html
 import fonttheater.config.ApplicationConfig
 import application.config.ConfigurationException
+import application.logging.Logger$
+import application.logging.Logger
 
 object Application {
+  private val name = "Font Theater"
+  Logger.info("~~~~~   Starting " + name + " application...   ~~~~~~")
   private val controller: ControllerInterface = initController()
+  Logger.info("~~~~~   " + name + " application started.   ~~~~~")
 
   def fontDemo(fontDemoTemplateName: String) =
     Action{request => controller.execute(fontDemoTemplateName, request)}
@@ -26,8 +31,7 @@ object Application {
     }
     catch {
       case e: Throwable => {
-        println("[FATAL] Initialization failed" + (if (e.getMessage != null) ": " + e.getMessage))
-        if (!e.isInstanceOf[ConfigurationException]) e.printStackTrace()
+        Logger.fatal("Initialization failed" + (if (e.getMessage != null) ": " + e.getMessage), throwable = if (!e.isInstanceOf[ConfigurationException]) e else null)
         ApplicationServiceUnavailableController
       }
     }
@@ -46,7 +50,7 @@ object Application {
       val output =
         templateEngine.executeTemplate(scalateSspTemplatePath, Map("model" -> model))
       val endTime = System.currentTimeMillis()
-      println("Time " + fontDemoTemplateName + ": " + (endTime - startTime) + " ms")
+      Logger.debug("Time " + fontDemoTemplateName + ": " + (endTime - startTime) + " ms")
 
       // TODO
       if (output == null) {

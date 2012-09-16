@@ -2,7 +2,6 @@ package fonttheater.controllers
 
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
-
 import play.api.mvc.Request
 import play.api.mvc.Action
 import play.api.mvc.AnyContent
@@ -13,6 +12,7 @@ import play.api.templates.Template1
 import fonttheater.config.ApplicationConfig
 import fonttheater.models.{FontDemoTemplateInfo, FontTheatreModel}
 import application.controller.Parameters
+import application.logging.Logger
 
 
 object ApplicationOld extends Controller {
@@ -75,7 +75,7 @@ object ApplicationOld extends Controller {
     //templateEngine.layout(scalateSspTemplatePath, Map("model" -> model))
       templateEngine.executeTemplate(scalateSspTemplatePath, Map("model" -> model))
     val endTime = System.currentTimeMillis()
-    println("Time " + fontDemoTemplateName + ": " + (endTime - startTime) + " ms")
+    Logger.debug("Time " + fontDemoTemplateName + ": " + (endTime - startTime) + " ms")
 
 
     // TODO

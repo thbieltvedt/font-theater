@@ -7,15 +7,16 @@ import ScalateBasedTemplateEngine.DEFAULT_ALLOW_CACHING
 import application.templateengine.TemplateEngine
 
 case class ScalateBasedTemplateEngine(
-                                       sourceDirectories: Traversable[File],
-                                       classLoader: ClassLoader,
-                                       allowReload: Boolean = DEFAULT_ALLOW_RELOAD,
-                                       allowCaching: Boolean = DEFAULT_ALLOW_CACHING)
-  extends TemplateEngine {
+  sourceDirectories: Traversable[File],
+  classLoader: ClassLoader,
+  allowReload: Boolean = DEFAULT_ALLOW_RELOAD,
+  allowCaching: Boolean = DEFAULT_ALLOW_CACHING) 
+extends TemplateEngine {
+
   private val templateEngine = new scalate.TemplateEngine(sourceDirectories)
   templateEngine.classLoader = classLoader
-  templateEngine.allowReload = false
-  templateEngine.allowCaching = true
+  templateEngine.allowReload = allowReload
+  templateEngine.allowCaching = allowCaching
 
   override def executeTemplate(templatePath: String, attributes: Map[String, Any]): String =
     templateEngine.layout(templatePath, attributes)
