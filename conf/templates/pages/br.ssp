@@ -1,4 +1,5 @@
 <%@ val model: fonttheater.models.FontTheatreModel %>
+<%@ val parameters: application.controller.Parameters %>
 
 #{
 	val baseUriResources = "/public/fontface"
@@ -60,7 +61,7 @@
               <ul id="menu-menu" class="main-menu sf-js-enabled">
                   <li class="menu-item current-menu-item"><a href="/">Hjem<br class="clear"><span class="numbers"></span></a></li>
                   <li class="menu-item"><a href="/screen/om-oss">Om oss<br class="clear"><span class="numbers"></span></a></li>
-                  <li class="menu-item"><a href="/screen/bilen">Bilen<br class="clear"><span class="numbers"></span></a></li>
+                  <li class="menu-item"><a href="/screen/bilen">Bilen ${parameters.getSingleValue("farge")}<br class="clear"><span class="numbers"></span></a></li>
                   <li class="menu-item"><a href="/screen/stoettespillere">Støttespillere<br class="clear"><span class="numbers"></span></a></li>
                   <li class="menu-item"><a href="/screen/blogg">Blogg<br class="clear"><span class="numbers"></span></a></li>
                   <li class="menu-item"><a href="/screen/fotoalbum?imageAlbumId=image-album-44.xml">Fotoalbum<br class="clear"><span class="numbers"></span></a></li>
