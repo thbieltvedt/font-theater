@@ -1,8 +1,8 @@
 <%@ val model: fonttheater.models.FontTheatreModel %>
 
 #{
-  val baseUriResources = "http://ec2-46-137-74-84.eu-west-1.compute.amazonaws.com:9003/public/fontface"
-  val _baseUriResources = "/public/fontface"
+  val _baseUriResources = "http://ec2-46-137-74-84.eu-west-1.compute.amazonaws.com:9003/public/fontface"
+  val baseUriResources = "/public/fontface"
 
   val backgroundColors          = Seq("#8BC752", "#F58221", "#EE1451", "#E93D24", "#008DD0", "#BFD32C", "#231F20", "#F0E817", "#EE1C25", "#487897", "#F0E817", "#FFFFFF")
   val secondaryBackgroundColors = Seq("#73A643", "#CA6C16", "#C40C42", "#C1321C", "#0076AF", "#A1B423", "black",   "#D7CC0F", "#C61C25", "#426D87", "#FFC107", "#FFFFFF")
