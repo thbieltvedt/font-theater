@@ -48,7 +48,7 @@ object Application {
 
       val startTime = System.currentTimeMillis()
       val output =
-        templateEngine.executeTemplate(scalateSspTemplatePath, Map("model" -> model))
+        templateEngine.executeTemplate(scalateSspTemplatePath, Map("model" -> model, "parameters" -> parameters))
       val endTime = System.currentTimeMillis()
       Logger.debug("Time " + fontDemoTemplateName + ": " + (endTime - startTime) + " ms")
 
