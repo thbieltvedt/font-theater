@@ -1,8 +1,7 @@
 <%@ val model: fonttheater.models.FontTheatreModel %>
 
 #{
-	val _baseUriResources = "http://ec2-46-137-74-84.eu-west-1.compute.amazonaws.com:9003/public/fontface"
-	val baseUriResources = "/public/fontface"
+	val baseUriResources = "http://ec2-46-137-74-84.eu-west-1.compute.amazonaws.com:9003/public/fontface"
 	val bodyFontSize = "14px"
 }#
 
@@ -13,7 +12,21 @@
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/> 
       <title>Bieltvedt Rallysport</title>
       <link rel="stylesheet" href="http://toolsrallyteam.no-static-resources.s3.amazonaws.com/design-templates/design-03/themes/theme-01/style.css?v=2" type="text/css" media="screen"/>
-      <style type="text/css">.logo a.logo {margin-top:32px;margin-bottom:30px;}</style>
+      <style type="text/css">
+        .logo a.logo {
+          margin-top:32px;
+          margin-bottom:30px;
+        }
+
+        .ingress {
+          font-weight: 600;
+        }
+
+        body {
+           color: #666666;
+           _color: #666666;   
+        }
+      </style>
       <!--[if IE 7]>
          <link rel="stylesheet" href="http://toolsrallyteam.no-static-resources.s3.amazonaws.com/design-templates/design-03/themes/theme-01/style_ie7.css" type="text/css" media="screen" />
       <![endif]-->
