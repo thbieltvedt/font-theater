@@ -5,7 +5,7 @@ import PlayProject._
 object ApplicationBuild extends Build {
 
     val appName         = "font-theater"
-    val appVersion      = "1.0-SNAPSHOT"
+    val appVersion      = "1.1-SNAPSHOT"
 
     val appDependencies = Seq(
       "org.fusesource.scalate" % "scalate-core" % "1.5.3"

@@ -1,5 +1,5 @@
 package fonttheater.repositories
 
-import fonttheater.models.FontCollection2
+import fonttheater.models.FontCollection
 
-trait FontCollectionRepository extends EntityRepository[FontCollection2]
+trait FontCollectionRepository extends EntityRepository[FontCollection]

@@ -13,6 +13,7 @@ import fonttheater.config.ApplicationConfig
 import fonttheater.models.{FontDemoTemplateInfo, FontTheatreModel}
 import application.controller.Parameters
 import application.logging.Logger
+import fonttheater.models.DefaultFontLibrary
 
 
 object ApplicationOld extends Controller {
@@ -114,7 +115,8 @@ object ApplicationOld extends Controller {
       parameterFontFamilyBanner,
       parameterFontFamilyButtons,
       parameterFontFamilyLogo,
-      parameters)
+      parameters,
+      DefaultFontLibrary)
 
     model
   }

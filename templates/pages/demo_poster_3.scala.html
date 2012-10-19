@@ -1,0 +1,27 @@
+@(model: models.FontTheatreModel)
+
+@textLines() = @{
+	Seq(
+		"Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Vv Ww Xx Yy",
+		"E n t i o l a b",
+		"E n t i o L A B",
+		"E N T I O L A B",
+		"ENTIOLAB"
+	)
+} 
+ 
+@pagetemplates.page_template_demo_poster(
+	model,
+	textLines(),
+	posterFontSize = "30", 
+	posterBackgroundColor = "#424242", 
+	posterTextColor = "silver", 
+	pageBackgroundColor = "#424242",  
+	pageTextColor = "white", 
+	canvasWidth = "700", 
+	canvasHeight = "200", 
+	posterBoxPadding = "10", 
+	lineSpaceFactor = "1.2"
+) {
+
+}

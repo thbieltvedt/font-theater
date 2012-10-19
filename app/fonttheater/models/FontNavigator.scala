@@ -3,10 +3,10 @@ package fonttheater.models
 import application.controller.Parameters
 
 class FontNavigator(
-                     val current: Font2,
-                     val previous: Font2,
-                     val next: Font2,
-                     val fontCollection: FontCollection2,
+                     val current: Font,
+                     val previous: Font,
+                     val next: Font,
+                     val fontCollection: FontCollection,
                      parameters: Parameters,
                      fontParameterName: String
                      ) {
@@ -17,7 +17,7 @@ class FontNavigator(
   def queryStringPrevious(): String =
     queryString(previous)
 
-  private def queryString(font: Font2): String = {
+  private def queryString(font: Font): String = {
     val queryString = new StringBuffer()
     if (font != null) queryString.append(fontParameterName + "=" + font.name + ":" + font.weight)
     parameters.map.foreach {

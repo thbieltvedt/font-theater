@@ -5,6 +5,7 @@ import org.fusesource.scalate
 import ScalateBasedTemplateEngine.DEFAULT_ALLOW_RELOAD
 import ScalateBasedTemplateEngine.DEFAULT_ALLOW_CACHING
 import application.templateengine.TemplateEngine
+import net.entio.templatetheater.TemplateTheaterEngine
 
 case class ScalateBasedTemplateEngine(
   sourceDirectories: Traversable[File],
@@ -13,7 +14,10 @@ case class ScalateBasedTemplateEngine(
   allowCaching: Boolean = DEFAULT_ALLOW_CACHING) 
 extends TemplateEngine {
 
-  private val templateEngine = new scalate.TemplateEngine(sourceDirectories)
+  private val templateEngine =
+    new TemplateTheaterEngine(sourceDirectories)
+    //new scalate.TemplateEngine(sourceDirectories)
+  	
   templateEngine.classLoader = classLoader
   templateEngine.allowReload = allowReload
   templateEngine.allowCaching = allowCaching

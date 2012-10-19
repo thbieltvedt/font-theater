@@ -3,19 +3,19 @@ package fonttheater.models
 import scala.collection.mutable.HashMap
 import utils.Utils._
 
-class FontCollection(val id: String, val fonts: List[FontOld]) {
-  def this(id: String, fontLists: FontOld*) = this(id, fontLists.toList)
+class FontCollection(val id: String, val fonts: List[Font]) {
+  def this(id: String, fontLists: Font*) = this(id, fontLists.toList)
 
-  private val fontsByName: Map[String, FontOld] =
-    mapFromList[String, FontOld](fonts, fontKey)
+  private val fontsByName: Map[String, Font] =
+    mapFromList[String, Font](fonts, fontKey)
 
-  FontCollection.registrateFontCollection(this)
+  FontCollection.registrateFontCollection(FontCollection.this)
 
-  def getFontByKey(fontKey: String): FontOld = fontsByName.get(fontKey).getOrElse(null)
+  def getFontByKey(fontKey: String): Font = fontsByName.get(fontKey).getOrElse(null)
 
-  def fontKey(font: FontOld): String = (font.name + ":" + font.weight)
+  def fontKey(font: Font): String = (font.name + ":" + font.weight)
 
-  def findSuccedingFont(fontInCollection: FontOld): FontOld = {
+  def findSuccedingFont(fontInCollection: Font): Font = {
     val fontIndex = findFontIndex(fontInCollection)
 
     if (fontIndex < 0) {
@@ -25,7 +25,7 @@ class FontCollection(val id: String, val fonts: List[FontOld]) {
     return if (fontIndex < (fonts.length - 1)) fonts(fontIndex + 1) else null
   }
 
-  def findPreceedingFont(fontInCollection: FontOld): FontOld = {
+  def findPreceedingFont(fontInCollection: Font): Font = {
     val fontIndex = findFontIndex(fontInCollection)
 
     if (fontIndex < 0) {
@@ -36,7 +36,7 @@ class FontCollection(val id: String, val fonts: List[FontOld]) {
   }
 
 
-  private def findFontIndex(font: FontOld): Int = fonts.indexOf(font)
+  private def findFontIndex(font: Font): Int = fonts.indexOf(font)
 }
 
 object FontCollection {

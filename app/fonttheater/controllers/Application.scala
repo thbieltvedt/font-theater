@@ -10,6 +10,7 @@ import fonttheater.config.ApplicationConfig
 import application.config.ConfigurationException
 import application.logging.Logger$
 import application.logging.Logger
+import fonttheater.models.DefaultFontLibrary
 
 object Application {
   private val name = "Font Theater"
@@ -39,16 +40,13 @@ object Application {
 
   private class ApplicationController(val templateEngine: TemplateEngine) extends ControllerInterface {
     def execute(fontDemoTemplateName: String, request: Request[AnyContent]): Result = {
-      val parameters = new Parameters(request.queryString)
-
-      val model: FontTheatreModel = parseFontDemoParameters(parameters, fontDemoTemplateName)
-
-      val scalateSspTemplatePath =
-        "/pages/" + fontDemoTemplateName + ".ssp"
-
       val startTime = System.currentTimeMillis()
+      
+      val parameters = new Parameters(request.queryString)
+      
       val output =
-        templateEngine.executeTemplate(scalateSspTemplatePath, Map("model" -> model, "parameters" -> parameters))
+        templateEngine.executeTemplate("/controller/controller.tpl", Map("viewTemplate" -> fontDemoTemplateName, "parameters" -> parameters))
+        
       val endTime = System.currentTimeMillis()
       Logger.debug("Time " + fontDemoTemplateName + ": " + (endTime - startTime) + " ms")
 
@@ -60,35 +58,6 @@ object Application {
       val html = new Html(output)
 
       Ok(html)
-    }
-
-    private def parseFontDemoParameters(parameters: Parameters, fontDemoTemplateName: String): FontTheatreModel = {
-      val parameterFontCollectionHeadings: String = parameters.getSingleValue(FontTheatreModel.PARAMETER_NAME_FONT_COLLECTION_HEADINGS)
-      val parameterFontFamilyDefault: String = parameters.getSingleValue(FontTheatreModel.PARAMETER_NAME_FONT_DEFAULT_TEXT)
-      val parameterFontFamilyNormalText: String = parameters.getSingleValue(FontTheatreModel.PARAMETER_NAME_FONT_NORMAL_TEXT)
-      val parameterFontFamilyHeadings: String = parameters.getSingleValue(FontTheatreModel.PARAMETER_NAME_FONT_HEADINGS_TEXT)
-      val parameterFontFamilySmallText: String = parameters.getSingleValue(FontTheatreModel.PARAMETER_NAME_FONT_SMALL_TEXT)
-      val parameterFontFamilyLargeText: String = parameters.getSingleValue(FontTheatreModel.PARAMETER_NAME_FONT_LARGE_TEXT)
-      val parameterFontFamilyMenu: String = parameters.getSingleValue(FontTheatreModel.PARAMETER_NAME_FONT_MENU_TEXT)
-      val parameterFontFamilyBanner: String = parameters.getSingleValue(FontTheatreModel.PARAMETER_NAME_FONT_BANNER_TEXT)
-      val parameterFontFamilyButtons: String = parameters.getSingleValue(FontTheatreModel.PARAMETER_NAME_FONT_BUTTONS_TEXT)
-      val parameterFontFamilyLogo: String = parameters.getSingleValue(FontTheatreModel.PARAMETER_NAME_FONT_LOGO_TEXT)
-
-      val model = new FontTheatreModel(
-        new FontDemoTemplateInfo(fontDemoTemplateName),
-        parameterFontCollectionHeadings,
-        parameterFontFamilyDefault,
-        parameterFontFamilyNormalText,
-        parameterFontFamilyHeadings,
-        parameterFontFamilySmallText,
-        parameterFontFamilyLargeText,
-        parameterFontFamilyMenu,
-        parameterFontFamilyBanner,
-        parameterFontFamilyButtons,
-        parameterFontFamilyLogo,
-        parameters)
-
-      model
     }
   }
 

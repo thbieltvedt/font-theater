@@ -1,0 +1,28 @@
+@(model: models.FontTheatreModel)
+
+@textLines() = @{
+	Seq(
+		"Cellar Doc",
+		"THERE IS A LIGHT THAT NEVER GOES OUT",
+		"HAMBURGER",
+		"Importance of a skypager",
+		"EVEN THE SMALLEST PHONES HAVE THE CONTENT OF A DIARY, LIAR.",
+		"A BOTTLE OF COKE ∆ÿ≈",
+		"Jesper Olsen var en yderst anderkjent fotboldspiller i Europa"
+	)
+} 
+ 
+@pagetemplates.page_template_demo_poster(
+	model, 
+	textLines(),
+	posterFontSize = "[adjust-to-canvas-width]",
+	posterBackgroundColor = "white", 
+	posterTextColor = "#424242",
+	pageBackgroundColor = "black", 
+	pageTextColor = "white",
+	canvasWidth = "640",
+	canvasHeight = "900", 
+	lineSpaceFactor = "1.2"
+) {
+
+}

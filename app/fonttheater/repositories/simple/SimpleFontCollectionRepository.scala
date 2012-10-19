@@ -3,12 +3,12 @@ package fonttheater.repositories.simple
 import scala.collection.JavaConversions
 import java.util.List
 import fonttheater.repositories.FontCollectionRepository
-import fonttheater.models.FontCollection2
+import fonttheater.models.FontCollection
 
 class SimpleFontCollectionRepository extends FontCollectionRepository {
 
-	def getById(id: String): FontCollection2 = {
-		val fontCollection: FontCollection2 = findById(id)
+	def getById(id: String): FontCollection = {
+		val fontCollection: FontCollection = findById(id)
 		
 		if (fontCollection == null) {
 			throw new IllegalArgumentException("Invalid font collection ID: " + id)
@@ -17,7 +17,7 @@ class SimpleFontCollectionRepository extends FontCollectionRepository {
 		return fontCollection;
 	}
 
-	def findById(id: String): FontCollection2 = FontCollection2.findFontCollectionById(id)
+	def findById(id: String): FontCollection = FontCollection.findFontCollectionById(id)
 
-	def getAll(): List[FontCollection2] = JavaConversions.seqAsJavaList(FontCollection2.allFontCollections())  
+	def getAll(): List[FontCollection] = JavaConversions.seqAsJavaList(FontCollection.allFontCollections())  
 }
