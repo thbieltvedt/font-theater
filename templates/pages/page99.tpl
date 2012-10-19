@@ -17,11 +17,11 @@
       <!--[if IE 7]>
          <link rel="stylesheet" href="http://toolsrallyteam.no-static-resources.s3.amazonaws.com/design-templates/design-03/themes/theme-01/style_ie7.css" type="text/css" media="screen" />
       <![endif]-->
-      <% render("../includes/fontTheatreHtmlHead.tpl", Map("model" -> model, "baseUriResources" -> baseUriResources)) %>
+      <% render("../includes/fontTheatreHtmlHead.tpl", Map("model" -> model)) %>
    </head>
 
    <body class="home blog">
-   	  <% render("../includes/fontNavigationPanelType1.tpl", Map("model" -> model, "baseUriResources" -> baseUriResources)) %>
+   	  <% render("../includes/fontNavigationPanelType1.tpl", Map("model" -> model)) %>
       <div class="other-background">
          <div class="wrap">   
             <table class="logo layoutTable" cellspacing="0" cellpadding="0">
