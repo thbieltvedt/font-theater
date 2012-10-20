@@ -154,7 +154,7 @@
 	    new Font("Oswald-Regular-webfont", "Oswald", FontFace("/font-face-kit/oswald-fontfacekit"), letterSpacingFactor = 1),
 	    new Font("Oswald-Light-webfont", "Oswald Light", FontFace("/font-face-kit/oswald-fontfacekit"), letterSpacingFactor = 1),
 	    new Font("Oswald-Bold-webfont", "Oswald Bold", FontFace("/font-face-kit/oswald-fontfacekit"), letterSpacingFactor = 1),
-	    new Font("Amble-Light-webfont", "Amble Light", FontFace("/font-face-kit/amble-fontfacekit")),
+	    new Font("Amble-Light-webfont", "Amble Light", FontFace("/font-face-kit/Amble-Light-fontfacekit")),
 	    new Font("Amble-LightCondensed-webfont", "Amble Light Condensed", FontFace("/font-face-kit/amble-fontfacekit")),
 	    new Font("Amble-Regular-webfont", "Amble", FontFace("/font-face-kit/amble-fontfacekit")),
 	    new Font("urbano", FontFace(null)),
