@@ -2,7 +2,23 @@
 <%@ val backgroundColor: String = "black" %>
 
 #{
-	//java.util.Collections.sort(model.fontDemoTemplateInfoList)
+	val fontDemoTemplates = Seq(
+		"Page1", 
+		"page2", 
+		"page3", 
+		"page4", 
+		"demo-poster-1", 
+		"demo-poster-2", 
+		"demo-poster-3", 
+		"demo-poster-4", 
+		"demo-poster-5", 
+		"waterfall", 
+		"waterfall1", 
+		"colors", 
+		"small-headings", 
+		"text-page-1", 
+		"page1-multi"
+	)
 }#
 
 <script>
@@ -22,8 +38,8 @@
 
 <div style="background: ${backgroundColor}; color: slategray; padding: 20px;">
 	<select id="templateSelect" onchange="location.href=buildUrl();" style="font-family: 'Lucida Sans Unicode', sans-serif; font-size: 12px;">
-		#for(fontDemoTemplate <- model.fontDemoTemplateInfoList)
-		<option value="${fontDemoTemplate.id}" #if(fontDemoTemplate.id == model.currentFontDemoTemplate.id) selected="selected"#end>${fontDemoTemplate.id}</option>
+		#for(fontDemoTemplate <- fontDemoTemplates)
+		<option value="${fontDemoTemplate}" #if(fontDemoTemplate == model.currentFontDemoTemplate.id) selected="selected"#end>${fontDemoTemplate}</option>
 		#end
 	</select>
 	<select id="fontCollectionSelect" onchange="location.href=buildUrl();" style="font-family: 'Lucida Sans Unicode', sans-serif; font-size: 12px;">
