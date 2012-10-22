@@ -32,16 +32,20 @@ object SimpleFontDemoTemplateInfoRepository {
  	private def registrate(fontDemoTemplateInfo: FontDemoTemplateInfo): Unit = 
 		fontDemoTemplateInfosById.put(fontDemoTemplateInfo.id, fontDemoTemplateInfo)
 
-	registrate(new FontDemoTemplateInfo("page1"));
+	registrate(new FontDemoTemplateInfo("Page1"));
 	registrate(new FontDemoTemplateInfo("page2"));
 	registrate(new FontDemoTemplateInfo("page3"));
 	registrate(new FontDemoTemplateInfo("page4"));
-	registrate(new FontDemoTemplateInfo("demo_poster_1"));
-	registrate(new FontDemoTemplateInfo("demo_poster_2"));
-	registrate(new FontDemoTemplateInfo("demo_poster_3"));
-	registrate(new FontDemoTemplateInfo("demo_poster_4"));
-	registrate(new FontDemoTemplateInfo("demo_poster_5"));
+	registrate(new FontDemoTemplateInfo("demo-poster-1"));
+	registrate(new FontDemoTemplateInfo("demo-poster-2"));
+	registrate(new FontDemoTemplateInfo("demo-poster-3"));
+	registrate(new FontDemoTemplateInfo("demo-poster-4"));
+	registrate(new FontDemoTemplateInfo("demo-poster-5"));
 	registrate(new FontDemoTemplateInfo("waterfall"));
 	registrate(new FontDemoTemplateInfo("waterfall1"));
 	registrate(new FontDemoTemplateInfo("colors"));
+	registrate(new FontDemoTemplateInfo("small-headings"));
+	registrate(new FontDemoTemplateInfo("text-page-1"));
+	registrate(new FontDemoTemplateInfo("page1-multi"));
+	
 }
