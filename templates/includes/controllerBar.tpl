@@ -3,7 +3,9 @@
 
 #{
 	val fontDemoTemplates = Seq(
-		"Page1", 
+		"text-page-1", 
+		"page1-multi", 
+		"page1", 
 		"page2", 
 		"page3", 
 		"page4", 
@@ -15,10 +17,7 @@
 		"waterfall", 
 		"waterfall1", 
 		"colors", 
-		"small-headings", 
-		"text-page-1", 
-		"page1-multi"
-	)
+		"small-headings")
 }#
 
 <script>
