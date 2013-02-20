@@ -3,6 +3,32 @@
 
 #{
 	val fontLibrary = new FontLibrary {
+
+	  val newFeaturedGoogleWebFonts = new FontCollection(
+	    "newFeaturedGoogleWebFonts",
+        new Font("Gilda Display", GoogleWebFonts(null)),
+        new Font("Convergence", GoogleWebFonts(null)),
+        new Font("Anaheim", GoogleWebFonts(null)),
+        new Font("Rambla", GoogleWebFonts(null)),
+        new Font("Libre Baskerville", GoogleWebFonts(null)),
+        new Font("Orienta", GoogleWebFonts(null)),
+        new Font("Headland One", GoogleWebFonts(null)),
+        new Font("Armata", GoogleWebFonts(null)),
+        new Font("Average Sans", GoogleWebFonts(null)),
+        new Font("Glegoo", GoogleWebFonts(null)),
+        new Font("ABeeZee", GoogleWebFonts(null)),
+        new Font("Domine", GoogleWebFonts(null)),
+        new Font("Imprima", GoogleWebFonts(null)),
+        new Font("Capriola", GoogleWebFonts(null)),
+        new Font("Julius Sans One", GoogleWebFonts(null)),
+        new Font("Fjalla One", GoogleWebFonts(null)),
+        new Font("Roboto", GoogleWebFonts(null)),
+        new Font("Donegal One", GoogleWebFonts(null)),
+        new Font("Gafata", GoogleWebFonts(null)),
+        new Font("Cinzel", GoogleWebFonts(null)),
+        new Font("Roboto Condensed", GoogleWebFonts(null)),
+        new Font("Pontano Sans", GoogleWebFonts(null))
+      );
 	  
 	  val featuredGoogleWebFontsSansSerifHeadings = new FontCollection(
 	    "featuredGoogleWebFontsSansSerifHeadings",
@@ -747,6 +773,32 @@
 	    new Font("comenia-sans-web", CssFontFace(null)),
 	    new Font("katarine-web", CssFontFace(null))
 	  );
+
+	  val geometricSansSerif = new FontCollection(
+	    "Geometric Sans Serifs", 
+		new Font("soleil", CssFontFace(null)),
+		new Font("Questrial", GoogleWebFonts(null)),
+		new Font("SofiaProLight-webfont", "Sofia Pro Light", FontFace("/font-face-kit/sofia-pro-fontfacekit")),
+		new Font("Montserrat", GoogleWebFonts(null))
+	  );
+
+	val alternateGothicAlternatives = new FontCollection(
+	    "Alternate Gothic Alternatives", 
+	    new Font("franklin-gothic-comp-urw", CssFontFace(null)),
+	    new Font("franklin-gothic-ext-comp-urw", CssFontFace(null)),
+	    new Font("alternate-gothic-no-1-d", CssFontFace(null)),
+	    new Font("alternate-gothic-no-2-d", CssFontFace(null)),
+	    new Font("alternate-gothic-no-3-d", CssFontFace(null)),
+	    new Font("league-gothic", CssFontFace(null)),
+	    new Font("bebas-neue", CssFontFace(null)),
+	    new Font("Oswald-Regular-webfont", "Oswald", FontFace("/font-face-kit/oswald-fontfacekit"), letterSpacingFactor = 1),
+	    new Font("Oswald-Light-webfont", "Oswald Light", FontFace("/font-face-kit/oswald-fontfacekit"), letterSpacingFactor = 1),
+	    new Font("Oswald-Bold-webfont", "Oswald Bold", FontFace("/font-face-kit/oswald-fontfacekit"), letterSpacingFactor = 1),
+	    new Font("DIN Next W02 Cond", FontsDotCom(null))
+	)
+
+
+
 	  
 	  val fontCollectionDefaultText: FontCollection = standardFonts
 	  val fontCollectionNormalText: FontCollection = goodNormalTextFonts14Px
