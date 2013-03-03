@@ -111,6 +111,8 @@
 
 	  val fontFaceFonts = new FontCollection(
 	    "fontfacefonts",
+	    new Font("MuseoSans_500-webfont", "Museo Sans 500", FontFace("/font-face-kit/museo-sans-fontfacekit")),
+	    new Font("SofiaProLiCond-webfont", "Sofia Pro Condensed Light", FontFace("/font-face-kit/sofia-pro-condensed-fontfacekit")),
 	    new Font("parisine-std", CssFontFace(null)),
 	    new Font("jaf-bernina-sans-condensed", "JAF Bernina Sans Condensed", CssFontFace(null)),
 	    new Font("jaf-bernina-sans-narrow-light", "JAF Bernina Sans Narrow Light", CssFontFace(null)),	    
