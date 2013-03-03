@@ -187,7 +187,9 @@
 	    new Font("urbano-light-webfont", FontFace(null)),
 	    new Font("urbano-lightcond-webfont", FontFace(null)),
 	    new Font("urbano-regular-webfont", FontFace(null)),
-	    new Font("vafle_classic-webfont", FontFace(null))
+	    new Font("vafle_classic-webfont", FontFace(null)),
+new Font("MuseoSans_500-webfont", "Museo Sans 500", FontFace("/font-face-kit/museo-sans-fontfacekit"))
+
 	  );
 
 
