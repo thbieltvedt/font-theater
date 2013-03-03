@@ -4,6 +4,8 @@
 
 GET /*file.ico             controllers.Assets.at(path="/public", file)
 
+GET /index.html             controllers.Assets.at(path="/public/index.html")
+
 GET /:fontDemoTemplate        fonttheater.controllers.Application.fontDemo(fontDemoTemplate: String)
 
 
