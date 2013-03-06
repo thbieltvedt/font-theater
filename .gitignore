@@ -13,4 +13,4 @@ tmp
 .idea_modules
 *.iml
 RUNNING_PID
-run-app.sh
+run-app.arguments
