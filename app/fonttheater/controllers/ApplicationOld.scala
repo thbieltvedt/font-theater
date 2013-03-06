@@ -84,7 +84,7 @@ object ApplicationOld extends Controller {
       return NotFound("Page not found")
     }
 
-    val html = new Html(output)
+    val html = new Html(new StringBuilder(output))
 
 
     Ok(html)
@@ -153,4 +153,3 @@ object ApplicationOld extends Controller {
     }
   }
 }
-

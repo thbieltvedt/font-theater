@@ -6,7 +6,6 @@ import java.io.File
 import play.api.Play.current
 import application.logging.Logger
 import java.net.URL
-import org.apache.commons.lang.StringUtils
 
 class ApplicationParameters(keyConfigFilePath: String) {  
   private val config = new Configuration(new Factory(keyConfigFilePath).config())

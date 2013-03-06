@@ -9,7 +9,7 @@ import org.fusesource.scalate.util.FileResourceLoader
 import net.entio.templatetheater.codegenerator.TplCodeGenerator
 
 
-class TemplateTheaterEngine(sourceDirectories: Traversable[File]) extends TemplateEngine(sourceDirectories) {
+class TemplateTheaterEngine(sourceDirectories: Traversable[File]) extends TemplateEngine(sourceDirectories, mode = "") {
   codeGenerators =
     Map(keyValue(new TplCodeGenerator))
 
