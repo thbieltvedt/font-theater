@@ -1,6 +1,6 @@
 import sbt._
 import Keys._
-import PlayProject._
+import play.Project._
 
 object ApplicationBuild extends Build {
 
@@ -8,10 +8,10 @@ object ApplicationBuild extends Build {
     val appVersion      = "1.1-SNAPSHOT"
 
     val appDependencies = Seq(
-      "org.fusesource.scalate" % "scalate-core" % "1.5.3"
+      "org.fusesource.scalate" % "scalate-core_2.10" % "1.6.1"
     )
 
-    val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+    val main = play.Project(appName, appVersion, appDependencies).settings(
       // Add your own project settings here      
     )
 

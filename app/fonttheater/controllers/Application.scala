@@ -2,15 +2,11 @@ package fonttheater.controllers
 
 import application.controller.Parameters
 import application.templateengine.TemplateEngine
-import fonttheater.models.FontDemoTemplateInfo
-import fonttheater.models.FontTheatreModel
 import play.api.mvc._
 import play.api.templates.Html
 import fonttheater.config.ApplicationConfig
 import application.config.ConfigurationException
-import application.logging.Logger$
 import application.logging.Logger
-import fonttheater.models.DefaultFontLibrary
 
 object Application {
   private val name = "Font Theater"
@@ -55,7 +51,7 @@ object Application {
         return NotFound("Page not found")
       }
 
-      val html = new Html(output)
+      val html = new Html(new StringBuilder(output))
 
       Ok(html)
     }
@@ -63,7 +59,7 @@ object Application {
 
   private object ApplicationServiceUnavailableController extends ControllerInterface {
     def execute(fontDemoTemplateName: String, request: Request[AnyContent]) =
-      ServiceUnavailable(new Html("Service initialization failed. See log for details."))
+      ServiceUnavailable(new Html(new StringBuilder("Service initialization failed. See log for details.")))
   }
 
 }
