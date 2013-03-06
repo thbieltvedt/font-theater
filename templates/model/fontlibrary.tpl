@@ -109,6 +109,15 @@
 	    //new Font2("Noticia Text", 		GoogleWebFonts(null)),
 	  );
 
+	  val geometricSansSerifCircularFonts = new FontCollection(
+	    "geometricSansSerifCircularFonts",
+	    new Font("MuseoSans_500-webfont", "Museo Sans 500", FontFace("/font-face-kit/museo-sans-fontfacekit")),
+	    new Font("questrial-regular-webfont", "Questrial", FontFace("/font-face-kit/questrial-fontfacekit")),
+	    new Font("Montserrat", GoogleWebFonts(null)),
+	    new Font("soleil", CssFontFace(null)),
+	    new Font("SofiaProLight-webfont", "Sofia Pro Light", FontFace("/font-face-kit/sofia-pro-fontfacekit"))
+      );
+
 	  val fontFaceFonts = new FontCollection(
 	    "fontfacefonts",
 	    new Font("MuseoSans_500-webfont", "Museo Sans 500", FontFace("/font-face-kit/museo-sans-fontfacekit")),
@@ -189,9 +198,7 @@
 	    new Font("urbano-light-webfont", FontFace(null)),
 	    new Font("urbano-lightcond-webfont", FontFace(null)),
 	    new Font("urbano-regular-webfont", FontFace(null)),
-	    new Font("vafle_classic-webfont", FontFace(null)),
-new Font("MuseoSans_500-webfont", "Museo Sans 500", FontFace("/font-face-kit/museo-sans-fontfacekit"))
-
+	    new Font("vafle_classic-webfont", FontFace(null))
 	  );
 
 
@@ -779,7 +786,9 @@ new Font("MuseoSans_500-webfont", "Museo Sans 500", FontFace("/font-face-kit/mus
 	  );
 
 	  val geometricSansSerif = new FontCollection(
-	    "Geometric Sans Serifs", 
+	    "Geometric Sans Serifs",
+	    new Font("MuseoSans_500-webfont", "Museo Sans 500", FontFace("/font-face-kit/museo-sans-fontfacekit")),
+	    new Font("museo-sans-rounded", CssFontFace(null)),
 		new Font("soleil", CssFontFace(null)),
 		new Font("Questrial", GoogleWebFonts(null)),
 		new Font("SofiaProLight-webfont", "Sofia Pro Light", FontFace("/font-face-kit/sofia-pro-fontfacekit")),
