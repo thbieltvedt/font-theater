@@ -1,1 +1,1 @@
-${PLAY_2_0_HOME}/play -Denv_config_file=environment_dev_mac.conf run
+-Denv_config_file=<Name of ennvironment config file in /config directory, e.g. environment_dev.conf>
