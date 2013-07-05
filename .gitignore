@@ -14,3 +14,5 @@ tmp
 *.iml
 RUNNING_PID
 run-app.arguments
+
+work/
