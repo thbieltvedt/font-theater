@@ -810,12 +810,27 @@
 	    new Font("DIN Next W02 Cond", FontsDotCom(null))
 	)
 
+	val hfjFonts = new FontCollection(
+	    "Hoefler & Frere-Jones fonts",
+	    new Font("'Gotham SSm A', 'Gotham SSm B'", "Gotham SSm", CssFontFace("fonts-hfj/font-face-gotham-ssm.css")),
+	    new Font("'Gotham XNarrow A', 'Gotham XNarrow B'", "Gotham Extra Narrow", CssFontFace("fonts-hfj/font-face-gotham-xnarrow.css")),
+	    new Font("'Gotham Rounded A', 'Gotham Rounded B'", "Gotham Rounded", CssFontFace("fonts-hfj/font-face-gotham-rounded.css")),
+	    new Font("'Ideal Sans A', 'Ideal Sans B'", "Ideal Sans", CssFontFace("fonts-hfj/font-face-ideal-sans.css")),
+	    new Font("'Verlag A', 'Verlag B'", "Verlag", CssFontFace("fonts-hfj/font-face-verlag.css")),
+	    new Font("'Knockout 29 A', 'Knockout 29 B'", "Knockout 29", CssFontFace("fonts-hfj/font-face-knockout-29.css")),
+	    new Font("'Archer A', 'Archer B'", "Archer", CssFontFace("fonts-hfj/font-face-archer.css")),
+	    new Font("'Topaz Background A', 'Topaz Background B'", "Topaz Background", CssFontFace("fonts-hfj/font-face-topaz-background.css")),
+	    new Font("'Idlewild SSm A', 'Idlewild SSm B'", "Idlewild SSm", CssFontFace("fonts-hfj/font-face-idlewild-ssm.css")),
+	    new Font("'Tungsten A', 'Tungsten B'", "Tungsten", CssFontFace("fonts-hfj/font-face-tungsten.css")),
+	    new Font("'Whitney SSm A', 'Whitney SSm B'", "Whitney SSm", CssFontFace("fonts-hfj/font-face-whitney-ssm.css")),
+	    new Font("'Whitney Cond A', 'Whitney Cond B'", "Whitney Cond", CssFontFace("fonts-hfj/font-face-whitney-cond.css"))
+	)
 
 
 	  
 	  val fontCollectionDefaultText: FontCollection = standardFonts
 	  val fontCollectionNormalText: FontCollection = goodNormalTextFonts14Px
-	  val fontCollectionHeadings: FontCollection = newGoogleWebFonts
+	  val fontCollectionHeadings: FontCollection = hfjFonts //newGoogleWebFonts
 	  val fontCollectionSmallText: FontCollection = standardFonts
 	  val fontCollectionLargeText: FontCollection = standardFonts
 	  val fontCollectionMenu: FontCollection = standardFonts
